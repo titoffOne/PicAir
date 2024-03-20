@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" stylesheets="@../styles/style.css" vvalue="0.01"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.titov.controllers.RulesController">
+    <content>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                  styleClass="gridpane-background-rules" stylesheets="@../styles/style.css">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Rules"
+                      GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+                <Button fx:id="btOk" mnemonicParsing="false" onAction="#btnOkOnAction" styleClass="button-menu"
+                        text="Понятно" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER"
+                        GridPane.rowIndex="9" GridPane.valignment="CENTER"/>
+                <Label fx:id="labelTitleOne" styleClass="label-rules-title" text="Подготовка к игре"
+                       GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="labelRulesOne" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity"
+                       prefWidth="1200.0" styleClass="label-rules-description" text="текст" textAlignment="JUSTIFY"
+                       wrapText="true" GridPane.rowIndex="2"/>
+                <Label fx:id="labelTitleTwo" alignment="CENTER" contentDisplay="CENTER" styleClass="label-rules-title"
+                       text="Начинаем игру!" textAlignment="CENTER" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="labelTitleThree" alignment="CENTER" contentDisplay="CENTER" styleClass="label-rules-title"
+                       text="Правила рисования" textAlignment="CENTER" GridPane.rowIndex="5">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="labelRulesTwo" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="372.0"
+                       maxWidth="-Infinity" prefWidth="1200.0" styleClass="label-rules-description" text="текст"
+                       textAlignment="JUSTIFY" wrapText="true" GridPane.rowIndex="4"/>
+                <Label fx:id="labelRulesThree" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0"
+                       layoutY="474.0" maxWidth="-Infinity" prefWidth="1200.0" styleClass="label-rules-description"
+                       text="текст" textAlignment="JUSTIFY" wrapText="true" GridPane.rowIndex="6"/>
+                <Label fx:id="labelTitleFour" alignment="CENTER" contentDisplay="CENTER" layoutX="724.0" layoutY="513.0"
+                       styleClass="label-rules-title" text="Определение победителя" textAlignment="CENTER"
+                       GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="labelRulesFour" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="576.0"
+                       maxWidth="-Infinity" prefWidth="1200.0" styleClass="label-rules-description" text="текст"
+                       textAlignment="JUSTIFY" wrapText="true" GridPane.rowIndex="8"/>
+            </children>
+        </GridPane>
+    </content>
+    <styleClass>
+        <String fx:value="scrollpane-background-rules"/>
+        <String fx:value="scroll-pane"/>
+    </styleClass>
+</ScrollPane>

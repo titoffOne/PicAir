@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane styleClass="gridpane-background-modal" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.titov.controllers.game.PauseController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="btEnd" mnemonicParsing="false" onAction="#btResultOnAction" styleClass="button-menu-modal" text="Завершить" GridPane.rowIndex="1" />
+        <Button fx:id="btResume" mnemonicParsing="false" onAction="#btResumeOnAction" styleClass="button-menu-modal" text="Продолжить" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Text fx:id="textTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title-modal" text="Пауза" GridPane.columnSpan="2147483647">
+        </Text>
+    </children>
+</GridPane>

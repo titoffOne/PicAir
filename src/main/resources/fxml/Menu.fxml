@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0"
+          prefWidth="1920.0" styleClass="gridpane-background" stylesheets="@../styles/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.titov.controllers.MenuController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Text id="airdraw" strokeType="OUTSIDE" styleClass="text-title" text="AirDraw" textAlignment="CENTER"/>
+    <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="0.0" prefWidth="0.0" GridPane.rowIndex="1">
+        <children>
+            <ImageView fx:id="imageViewGame" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"
+                       visible="false">
+                <image>
+                    <Image url="@/images/game.png"/>
+                </image>
+            </ImageView>
+            <Button fx:id="btGame" mnemonicParsing="false" onAction="#btGameOnAction"
+                    onMouseEntered="#btGameOnMouseEntered" onMouseExited="#btGameOnMouseExited" styleClass="button-menu"
+                    text="Играть">
+                <FlowPane.margin>
+                    <Insets left="20.0" right="80.0"/>
+                </FlowPane.margin>
+            </Button>
+        </children>
+    </FlowPane>
+    <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="10.0" layoutY="372.0" prefHeight="0.0"
+              prefWidth="0.0" GridPane.rowIndex="2">
+        <children>
+            <ImageView fx:id="imageViewRules" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"
+                       visible="false">
+                <image>
+                    <Image url="@/images/rules.png"/>
+                </image>
+            </ImageView>
+            <Button fx:id="btRules" mnemonicParsing="false" onAction="#btnRulesOnAction"
+                    onMouseEntered="#btRulesOnMouseEntered" onMouseExited="#btRulesOnMouseExited"
+                    styleClass="button-menu" text="Правила">
+                <FlowPane.margin>
+                    <Insets left="20.0" right="80.0"/>
+                </FlowPane.margin>
+            </Button>
+        </children>
+    </FlowPane>
+    <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="10.0" layoutY="528.0" prefHeight="0.0"
+              prefWidth="0.0" GridPane.rowIndex="3">
+        <children>
+            <ImageView fx:id="imageViewSettings" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true"
+                       preserveRatio="true" visible="false">
+                <image>
+                    <Image url="@/images/settings.png"/>
+                </image>
+            </ImageView>
+            <Button fx:id="btSettings" mnemonicParsing="false" onAction="#onClickSwitchToSceneSettings"
+                    onMouseEntered="#btSettingsOnMouseEntered" onMouseExited="#btSettingsOnMouseExited"
+                    styleClass="button-menu" text="Настройки">
+                <FlowPane.margin>
+                    <Insets left="20.0" right="80.0"/>
+                </FlowPane.margin>
+            </Button>
+        </children>
+    </FlowPane>
+    <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="10.0" layoutY="682.0" prefHeight="0.0"
+              prefWidth="0.0" GridPane.rowIndex="4">
+        <children>
+            <ImageView fx:id="imageViewExit" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true"
+                       visible="false">
+                <image>
+                    <Image url="@/images/exit.png"/>
+                </image>
+            </ImageView>
+            <Button fx:id="btExit" mnemonicParsing="false" onAction="#onClickExitApplication"
+                    onMouseEntered="#btExitOnMouseEntered" onMouseExited="#btExitOnMouseExited" styleClass="button-menu"
+                    text="Выйти">
+                <FlowPane.margin>
+                    <Insets left="20.0" right="80.0"/>
+                </FlowPane.margin>
+            </Button>
+        </children>
+        <GridPane.margin>
+            <Insets bottom="100.0"/>
+        </GridPane.margin>
+    </FlowPane>
+</GridPane>

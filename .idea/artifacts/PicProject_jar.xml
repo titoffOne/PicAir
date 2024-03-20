@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PicProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PicProject_jar</output-path>
+    <root id="archive" name="PicProject.jar">
+      <element id="module-output" name="PicProject" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Programs/opencv/opencv 3.1.0/build/java/opencv-310.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

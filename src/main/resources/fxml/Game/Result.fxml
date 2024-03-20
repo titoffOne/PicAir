@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+          prefWidth="600.0" styleClass="gridpane-background" stylesheets="@../../styles/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.titov.controllers.game.ResultController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="300.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Result"
+              GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" orientation="VERTICAL" prefHeight="200.0"
+                  prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+            <children>
+                <Label fx:id="labelResultInfo" alignment="CENTER" styleClass="label-result-info" text="Победитель"
+                       textAlignment="CENTER"/>
+                <Label fx:id="labelWinner" alignment="CENTER" styleClass="label-winner" text="КОМАНДА"
+                       textAlignment="CENTER"/>
+            </children>
+        </FlowPane>
+        <GridPane alignment="CENTER" GridPane.rowIndex="2">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="200.0"/>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label fx:id="labelNameTeamOne" alignment="CENTER" styleClass="label-result-teams" text="КОМАНДА 1"/>
+                <Label alignment="CENTER" styleClass="label-vs" text="VS" GridPane.columnIndex="1"/>
+                <Label fx:id="labelNameTeamTwo" alignment="CENTER" styleClass="label-result-teams" text="КОМАНДА 2"
+                       GridPane.columnIndex="2"/>
+            </children>
+        </GridPane>
+        <GridPane GridPane.rowIndex="3">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="100.0"/>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label fx:id="labelCountPointsTeamOne" alignment="CENTER" styleClass="label-result-teams" text="0"/>
+                <Label alignment="CENTER" styleClass="label-result-teams" text=":" GridPane.columnIndex="1"/>
+                <Label fx:id="labelCountPointsTeamTwo" alignment="CENTER" styleClass="label-result-teams" text="0"
+                       GridPane.columnIndex="2"/>
+            </children>
+        </GridPane>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0"
+                  GridPane.rowIndex="4">
+            <children>
+                <Button fx:id="btMainMenu" mnemonicParsing="false" onAction="#btMainMenuOnAction"
+                        styleClass="button-result" text="Главное меню">
+                    <FlowPane.margin>
+                        <Insets right="20.0"/>
+                    </FlowPane.margin>
+                </Button>
+                <Button fx:id="btPlay" mnemonicParsing="false" onAction="#btPlayOnAction" styleClass="button-result"
+                        text="Играть еще">
+                    <FlowPane.margin>
+                        <Insets left="20.0"/>
+                    </FlowPane.margin>
+                </Button>
+            </children>
+        </FlowPane>
+    </children>
+</GridPane>

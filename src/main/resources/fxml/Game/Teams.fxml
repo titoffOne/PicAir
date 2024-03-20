@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+          prefWidth="600.0" styleClass="gridpane-background" stylesheets="@../../styles/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.titov.controllers.game.TeamsController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="300.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Game" textAlignment="CENTER"
+              GridPane.columnSpan="2147483647"/>
+        <Text fx:id="textTeamOne" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-teams" text="Команда 1"
+              GridPane.rowIndex="1"/>
+        <Text fx:id="textTeamTwo" layoutX="472.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="text-teams" text="Команда 2" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <TextField fx:id="textFieldTeamOne" alignment="CENTER" styleClass="text-field-teams" text="ОГУРЦЫ"
+                   GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="100.0" right="100.0"/>
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="textFieldTeamTwo" alignment="CENTER" styleClass="text-field-teams" text="ПОМИДОРЫ"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="100.0" right="100.0"/>
+            </GridPane.margin>
+        </TextField>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0"
+                  GridPane.rowIndex="3">
+            <children>
+                <RadioButton id="rbtOne" contentDisplay="CENTER" mnemonicParsing="false"
+                             onAction="#handleRadioButtonLeftOnAction" selected="true">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="groupColorTeamOne"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton id="rbtTwo" contentDisplay="CENTER" layoutX="493.0" layoutY="136.0" mnemonicParsing="false"
+                             onAction="#handleRadioButtonLeftOnAction" toggleGroup="$groupColorTeamOne"/>
+                <RadioButton id="rbtThree" contentDisplay="CENTER" layoutX="501.0" layoutY="136.0"
+                             mnemonicParsing="false" onAction="#handleRadioButtonLeftOnAction"
+                             toggleGroup="$groupColorTeamOne"/>
+                <RadioButton id="rbtFour" contentDisplay="CENTER" layoutX="509.0" layoutY="136.0"
+                             mnemonicParsing="false" onAction="#handleRadioButtonLeftOnAction"
+                             toggleGroup="$groupColorTeamOne"/>
+            </children>
+        </FlowPane>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="10.0" layoutY="821.0" prefHeight="200.0"
+                  prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <RadioButton id="rbtOne" contentDisplay="CENTER" mnemonicParsing="false"
+                             onAction="#handleRadioButtonRightOnAction">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="groupColorTeamTwo"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton id="rbtTwo" contentDisplay="CENTER" layoutX="493.0" layoutY="136.0" mnemonicParsing="false"
+                             onAction="#handleRadioButtonRightOnAction" toggleGroup="$groupColorTeamTwo"/>
+                <RadioButton id="rbtThree" contentDisplay="CENTER" layoutX="501.0" layoutY="136.0"
+                             mnemonicParsing="false" onAction="#handleRadioButtonRightOnAction"
+                             toggleGroup="$groupColorTeamTwo"/>
+                <RadioButton id="rbtFour" contentDisplay="CENTER" layoutX="509.0" layoutY="136.0"
+                             mnemonicParsing="false" onAction="#handleRadioButtonRightOnAction" selected="true"
+                             toggleGroup="$groupColorTeamTwo"/>
+            </children>
+        </FlowPane>
+        <Text fx:id="textTimer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-paragraph" text="Таймер"
+              GridPane.halignment="LEFT" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets left="800.0"/>
+            </GridPane.margin>
+        </Text>
+        <Text fx:id="textRound" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-paragraph" text="Раунды"
+              GridPane.halignment="LEFT" GridPane.rowIndex="5">
+            <GridPane.margin>
+                <Insets left="800.0"/>
+            </GridPane.margin>
+        </Text>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0"
+                  GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+            <children>
+                <Button mnemonicParsing="false" onAction="#btBackOnAction" styleClass="button-back" text="&lt;">
+                    <FlowPane.margin>
+                        <Insets right="20.0"/>
+                    </FlowPane.margin>
+                </Button>
+                <Button fx:id="btPlay" mnemonicParsing="false" onAction="#btPlayOnAction" styleClass="button-menu"
+                        text="Начать игру"/>
+            </children>
+        </FlowPane>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-vs" text="VS" textAlignment="CENTER"
+              GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2"
+              GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets left="100.0"/>
+            </GridPane.margin>
+        </Text>
+        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="70.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="90.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="70.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#btIncTimer" styleClass="button-operand" text="+"
+                        textAlignment="CENTER" GridPane.columnIndex="2">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Button>
+                <Text fx:id="textTimerValue" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-paragraph"
+                      text="60" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Text>
+                <Button mnemonicParsing="false" onAction="#btDecTimer" styleClass="button-operand" text="-"
+                        textAlignment="CENTER">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Button>
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0"/>
+            </GridPane.margin>
+        </GridPane>
+        <GridPane layoutX="1018.0" layoutY="664.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="70.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="60.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                                   prefWidth="70.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#btIncRound" styleClass="button-operand" text="+"
+                        textAlignment="CENTER" GridPane.columnIndex="2"/>
+                <Text fx:id="textRoundValue" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-paragraph" text="3"
+                      GridPane.columnIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#btDecRound" styleClass="button-operand" text="-"
+                        textAlignment="CENTER"/>
+            </children>
+            <GridPane.margin>
+                <Insets left="10.0"/>
+            </GridPane.margin>
+        </GridPane>
+    </children>
+</GridPane>

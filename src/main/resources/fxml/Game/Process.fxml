@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+          prefWidth="600.0" styleClass="gridpane-game-process-background" stylesheets="@../../styles/style.css"
+          xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.titov.controllers.game.ProcessController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                           prefWidth="640.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                           prefWidth="640.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0"
+                           prefWidth="640.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="200.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <ImageView fx:id="imageViewCamera" fitHeight="1200.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowSpan="2147483647"
+                   GridPane.valignment="CENTER"/>
+        <Label fx:id="labelMainTimer" contentDisplay="CENTER" styleClass="label-timer" text="0" GridPane.columnIndex="1"
+               GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+        <Label fx:id="labelInfo" contentDisplay="CENTER" styleClass="label-info"
+               text="Раунд 2, играет команда &quot;Огурцы&quot;" textAlignment="CENTER" GridPane.columnIndex="1"
+               GridPane.rowIndex="2"/>
+        <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647"
+                  GridPane.rowIndex="3">
+            <children>
+                <Button fx:id="btPause" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false"
+                        mnemonicParsing="false" onAction="#btPauseOnAction" styleClass="button-helper"
+                        textAlignment="CENTER" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/pause.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="btAddPoints" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                        onAction="#btAddPointOnAction"
+                        styleClass="button-process" text="+1 балл" textAlignment="CENTER" visible="false">
+                    <FlowPane.margin>
+                        <Insets left="50.0" right="50.0"/>
+                    </FlowPane.margin>
+                </Button>
+                <Button fx:id="btDelete" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                        onAction="#btDeleteOnAction" styleClass="button-helper" textAlignment="CENTER" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/delete.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </FlowPane>
+        <FlowPane alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0"
+                  GridPane.columnIndex="2">
+            <children>
+                <Label fx:id="labelPointsTeamTwo" alignment="CENTER" styleClass="label-teams-points" text="15"/>
+                <Label fx:id="labelNameTeamTwo" alignment="CENTER" styleClass="label-teams-name" text="ПОМИДОРЫ">
+                    <FlowPane.margin>
+                        <Insets left="20.0"/>
+                    </FlowPane.margin>
+                </Label>
+            </children>
+        </FlowPane>
+        <FlowPane alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Label fx:id="labelNameTeamOne" alignment="CENTER" styleClass="label-teams-name" text="ОГУРЦЫ"
+                       textAlignment="CENTER">
+                    <opaqueInsets>
+                        <Insets right="10.0"/>
+                    </opaqueInsets>
+                    <FlowPane.margin>
+                        <Insets right="20.0"/>
+                    </FlowPane.margin>
+                </Label>
+                <Label fx:id="labelPointsTeamOne" alignment="CENTER" contentDisplay="CENTER"
+                       styleClass="label-teams-points" text="10" textAlignment="CENTER"/>
+            </children>
+        </FlowPane>
+        <Button fx:id="btStartTimer" mnemonicParsing="false" onAction="#btStartTimerOnAction"
+                styleClass="button-process" text="Запустить таймер" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </children>
+</GridPane>

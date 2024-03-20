@@ -1,0 +1,380 @@
+/* --------------------------------------------- Шрифты --------------------------------------------- */
+
+@font-face {
+    font-family: 'Russo One';
+    src: url('../fonts/RussoOne.ttf');
+}
+
+@font-face {
+    font-family: 'Just Me Again Down Here';
+    src: url('../fonts/JustMeAgainDownHere.ttf');
+}
+
+/* --------------------------------------------- Общие стили --------------------------------------------- */
+
+.gridpane-background {
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+    -fx-background-color: linear-gradient(to bottom, #250079, #885AF0);
+}
+
+
+.gridpane-background-modal {
+    -fx-pref-width: 800;
+    -fx-pref-height: 400;
+    -fx-background-color: white;
+    -fx-background-radius: 30px;
+}
+
+
+.button {
+    -fx-background-radius: 30px;
+    -fx-background-color: #F44D7B;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+.button: hover {
+    -fx-background-color: #FF8947;
+}
+
+.text-title {
+    -fx-fill: linear-gradient(to bottom, #FFF, #4248D6);
+    -fx-font-family: 'Just Me Again Down Here';
+    -fx-font-size: 222px;
+}
+
+.text-paragraph {
+    -fx-font-size: 48px;
+    -fx-font-family: 'Russo One';
+    -fx-fill: white;
+}
+
+/* --------------------------------------------- Окно Loading --------------------------------------------- */
+
+.gridpane-background-modal-loading {
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+    -fx-background-color: linear-gradient(to bottom, #250079, transparent);;
+}
+
+.text-title-loading {
+    -fx-background-color: red;
+    -fx-fill: linear-gradient(to bottom, #FFF, #4248D6);
+    -fx-font-family: 'Just Me Again Down Here';
+    -fx-font-size: 300px;
+}
+
+/* --------------------------------------------- Окно Menu --------------------------------------------- */
+
+.button-menu {
+    -fx-min-width: 15em;
+    -fx-background-radius: 30px;
+    -fx-font-size: 64px;
+    -fx-background-color: #F44D7B;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+/* --------------------------------------------- Окно GameTeams --------------------------------------------- */
+
+.text-teams {
+    -fx-font-size: 36px;
+    -fx-font-family: 'Russo One';
+    -fx-fill: #47DEFF;
+}
+
+.text-vs {
+    -fx-fill: white;
+    -fx-font-family: 'Just Me Again Down Here';
+    -fx-font-size: 100px;
+}
+
+.text-field-teams {
+    -fx-background-color: transparent;
+    -fx-border-color: #47DEFF;
+    -fx-border-radius: 15;
+    -fx-border-width: 5;
+    -fx-font-size: 48px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-padding: 50px;
+}
+
+.radio-button:selected .radio {
+    -fx-border-radius: 10;
+    -fx-border-width: 7;
+    -fx-border-color: white;;
+}
+
+.radio-button#rbtOne .radio {
+    -fx-background-color: #47DEFF;
+    -fx-mark-highlight-color: #47DEFF;
+    -fx-mark-color: #47DEFF;
+}
+
+.radio-button#rbtTwo .radio {
+    -fx-background-color: #F44DCF;
+    -fx-mark-highlight-color: #F44DCF;
+    -fx-mark-color: #F44DCF;
+}
+
+.radio-button#rbtThree .radio {
+    -fx-background-color: #FFED47;
+    -fx-mark-highlight-color: #FFED47;
+    -fx-mark-color: #FFED47;
+}
+
+.radio-button#rbtFour .radio {
+    -fx-background-color: #FF4752;
+    -fx-mark-highlight-color: #FF4752;
+    -fx-mark-color: #FF4752;
+}
+
+
+.button-operand {
+    -fx-font-size: 30px;
+    -fx-background-radius: 60px;
+    -fx-background-color: white;
+    -fx-text-fill: #673CC9;
+    -fx-font-family: 'Russo One';
+}
+
+.button-operand: hover {
+    -fx-background-color: white;
+    -fx-text-fill: #F44D7B;
+}
+
+.button-back {
+    -fx-min-width: 2em;
+    -fx-font-size: 64px;
+    -fx-background-color: #F44D7B;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+/* --------------------------------------------- Окно GameProcess --------------------------------------------- */
+
+.gridpane-game-process-background {
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+    -fx-background-color: black;
+}
+
+.label-teams-name {
+    -fx-pref-width: 400px;
+    -fx-padding: 15px;
+    -fx-font-size: 48px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-background-color: #47DEFF;
+}
+
+.label-teams-points {
+    -fx-pref-width: 100px;
+    -fx-padding: 15px;
+    -fx-font-size: 48px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-background-color: #47DEFF;
+}
+
+.label-timer {
+    -fx-font-size: 72px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: white;
+}
+
+.label-info {
+    -fx-padding: 15px;
+    -fx-font-size: 30px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: #7E51E4;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-background-color: white;
+}
+
+.button-process {
+    -fx-min-width: 15em;
+    -fx-background-radius: 30px;
+    -fx-font-size: 64px;
+    -fx-background-color: #7E51E4;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+.button-helper {
+    -fx-background-color: #7E51E4;
+    -fx-padding: 20px;
+}
+
+
+/* --------------------------------------------- Окно GamePause --------------------------------------------- */
+
+.text-title-modal {
+    -fx-font-size: 86px;
+    -fx-fill: #7E51E4;
+    -fx-font-family: 'Russo One';
+}
+
+.button-menu-modal {
+    -fx-min-width: 350;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 4px;
+    -fx-font-size: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: #7E51E4;
+    -fx-text-fill: #7E51E4;
+}
+
+.button-menu-modal: hover {
+    -fx-background-color: #7E51E4;
+    -fx-border-color: #7E51E4;
+    -fx-text-fill: white;
+}
+
+/* --------------------------------------------- Окно GameResult--------------------------------------------- */
+
+.label-result-info {
+    -fx-font-size: 48px;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+.label-winner {
+    -fx-font-size: 80px;
+    -fx-text-fill: #F44D7B;
+    -fx-font-family: 'Russo One';
+}
+
+.label-vs {
+    -fx-text-fill: white;
+    -fx-font-family: 'Just Me Again Down Here';
+    -fx-font-size: 100px;
+}
+
+.label-result-teams {
+    -fx-font-size: 48px;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+.button-result {
+    -fx-min-width: 500;
+    -fx-background-radius: 30px;
+    -fx-font-size: 48px;
+    -fx-background-color: #F44D7B;
+    -fx-text-fill: white;
+    -fx-font-family: 'Russo One';
+}
+
+
+/* --------------------------------------------- Окно Rules --------------------------------------------- */
+
+
+.scrollpane-background-rules {
+    -fx-pref-width: 1920;
+    -fx-pref-height: 1080;
+    -fx-background-color: transparent;
+}
+
+.gridpane-background-rules {
+    -fx-pref-width: 1920;
+    -fx-background-color: linear-gradient(to bottom, #250079, #885AF0);
+}
+
+.label-rules-title {
+    -fx-font-size: 48px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: #F44D7B;
+}
+
+.label-rules-description {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Russo One';
+    -fx-text-fill: white;
+}
+
+/* Стилизация ползунка вертикальной прокрутки */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: linear-gradient(to bottom, #250079, #885AF0); /* Цвет фона ползунка */
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #F44D7B; /* Цвет ползунка */
+}
+
+/* Стрелка вверх */
+.scroll-pane .scroll-bar:vertical .increment-button:hover {
+    -fx-background-color: #F44D7B; /* Цвет фона стрелки вверх */
+}
+
+/* Стрелка вниз */
+.scroll-pane .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #F44D7B; /* Цвет фона стрелки вниз */
+}
+
+
+/* --------------------------------------------- Окно Settings --------------------------------------------- */
+
+#colorPicker {
+    -fx-font-family: 'Russo One';
+    -fx-font-size: 20px;
+    -fx-background-color: white;
+}
+
+#colorPicker .label {
+    -fx-text-fill: #F44D7B;
+}
+
+.slider .track {
+    -fx-background-color: white;
+}
+
+.slider .thumb {
+    -fx-background-color: #F44D7B;
+}
+
+/* Фон чекбокса в невыбранном состоянии */
+CheckBox > .box {
+    -fx-background-color: white;
+}
+
+/* Фон чекбокса в выбранном состоянии */
+CheckBox:selected > .box {
+    -fx-background-color: #F44D7B;
+}
+
+/* Знак "галочка" в выбранном состоянии */
+CheckBox:selected > .box > .mark {
+    -fx-background-color: white;
+}
+
+#choiceBoxLanguage {
+    -fx-font-family: 'Russo One';
+    -fx-font-size: 20px;
+    -fx-background-color: white;
+}
+
+#choiceBoxLanguage .label {
+    -fx-text-fill: #F44D7B;
+}
+
+.choice-box .menu-item:hover  {
+    -fx-background-color: #663BC7;
+}
+
+.choice-box .menu-item:selected  {
+    -fx-background-color: white;
+}
+
+/* --------------------------------------------- Окно Exit --------------------------------------------- */
