@@ -8,6 +8,8 @@ AirDraw - игра на java, вдохновленная настольной и
 
 ![image](https://github.com/user-attachments/assets/2a8d0e8b-8f3e-48c2-bb20-28fb8d2e9bc2)
 
+![image](https://github.com/user-attachments/assets/3dbe1c64-397d-4c28-ad8c-a49ef1532cc1)
+
 ![image](https://github.com/user-attachments/assets/fe5561e4-6cba-4dbf-991c-7cfbcea46b4d)
 
 ![image](https://github.com/user-attachments/assets/e82d7c37-96d9-4c80-8c7b-c06254dee010)
